@@ -15,7 +15,7 @@ const findLength = (item) => (item == null ? 0 : item.length);
 
 const setText = () => {
   data.sentences = findLength(textarea.value.match(/\056/g));
-  data.words = findLength(textarea.value.match(/[a-zA-Z]+/g));
+  data.words = findLength(textarea.value.match(/[a-z]+/gi));
   data.lowercase = findLength(textarea.value.match(/[a-z]/g));
   data.spaces = findLength(textarea.value.match(/\s/g));
   data.digits = findLength(textarea.value.match(/\d/g));
